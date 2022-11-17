@@ -25,7 +25,7 @@ def password_hash(password):
 # $2b$12$GcEMIU8inJS5UMbazI9MUOKgZDK6ubmnF4RFPn4OtpxU8e3smq17q
 
 def password_verify(input_password, hash):
-    userBytes = input_password.encode("utf-8")
+    userBytes = input_password.encode()
     result = bcrypt.checkpw(userBytes, hash.encode())
     print("Status", result)
     return result
